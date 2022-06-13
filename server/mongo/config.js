@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-let uri = "mongodb://localhost:27017/rybbon";
-// let uri = "mongodb+srv://admin:yjaHsol9GAjYMgfW@cluster0.t8v120e.mongodb.net/rybbon?retryWrites=true&w=majority";
+// let uri = "mongodb://localhost:27017/rybbon";
+let uri = "mongodb+srv://admin:yjaHsol9GAjYMgfW@cluster0.t8v120e.mongodb.net/rybbon?retryWrites=true&w=majority";
 
 mongoose.connect(
     uri, {

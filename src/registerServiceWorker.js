@@ -3,10 +3,10 @@
 import {
     register
 } from 'register-service-worker'
-import {
-    infoToaster,
-    errorToaster
-} from './components/shared/service/ErrorHandler'
+// import {
+//     infoToaster,
+//     errorToaster
+// } from './components/shared/service/ErrorHandler'
 
 if (process.env.NODE_ENV === 'production') {
     register(`${process.env.BASE_URL}service-worker.js`, {

@@ -4,8 +4,8 @@
     "private": true,
     "scripts": {
         "serve": "vue-cli-service serve",
-        "dev": "nodemon server.js",
-        "start": "concurrently \"npm:start\" \"npm:serve --fix\"",
+        "start": "nodemon server.js",
+        "dev": "concurrently \"npm:start\" \"npm:serve --fix\"",
         "dev:build": "vue-cli-service build --mode development",
         "build": "vue-cli-service build",
         "lint": "vue-cli-service lint",

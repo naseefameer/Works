@@ -17,7 +17,11 @@ router
     .route("/users")
 
 //  Create a new User
-.post((req, res) => {
+.post(async(req, res) => {
+
+        const user1 = await UserModel.findOne({ email: req.body.email });
+        if (user1) return res.status(400).json({ 'message': 'Email already exist' });
+
         const user = new UserModel(); // create a new instance of the User model
 
         user.firstName = req.body.firstName;

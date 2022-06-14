@@ -116,11 +116,20 @@ export default {
             this.showLoader = false;
             successToaster(
               "Registered Successfully",
-              "User Registered Successfully"
+              "User Registered Successfully. please login"
             );
+            this.$router.push("/");
           })
           .catch((error) => {
-            console.log(error);
+            this.showLoader = false;
+            if (error.response && error.response.status == '400') {
+              console.log("you are at error");
+              errorToaster(
+              "Registeration Failed",
+              error.response.data.message
+            );
+              return;
+            }
             errorToaster(
               "Registeration Failed",
               "Please try again after sometime"
